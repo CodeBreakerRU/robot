@@ -56,7 +56,9 @@ After=network-online.target
 User=blackbox
 Group=blackbox
 Type=simple
-ExecStart=$BLACKBOX_DIR/blackbox_exporter --web.listen-address=:9115
+ExecStart=$BLACKBOX_DIR/blackbox_exporter \
+   --config.file /home/blackbox/blackbox/blackbox.yml \
+   --web.listen-address=:9115
 Restart=always
 
 [Install]
