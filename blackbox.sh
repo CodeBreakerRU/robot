@@ -72,3 +72,6 @@ systemctl start blackbox.service
 
 # Show service status
 systemctl status blackbox.service --no-pager
+
+# Show Listening port
+lsof -i :9115
